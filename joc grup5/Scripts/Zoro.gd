@@ -36,11 +36,11 @@ func anima(moviment):
 		$AnimatedSprite.play("espera")
 		
 	if moviment.x < 0:
-		$AnimatedSprite.play("caminant")
+		$AnimatedSprite.play("corrents")
 		$AnimatedSprite.flip_h = false
 		
 	if moviment.x > 0:
-		$AnimatedSprite.play("caminant")
+		$AnimatedSprite.play("corrents")
 		$AnimatedSprite.flip_h = true
 	
 	if moviment.y < 0 and moviment.x < 0:
