@@ -1,6 +1,8 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://frames enemics/gos de metall.jpg" type="Texture" id=1]
+[ext_resource path="res://Scripts/gos metàl·lic.gd" type="Script" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -51,15 +53,78 @@ animations = [ {
 "frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
 "loop": true,
 "name": "camina",
-"speed": 5.0
+"speed": 20.0
 } ]
 
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 42.0648, 23.5888 )
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 507.999, 31 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 10, 126 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 11.836, 33.1212 )
+
 [node name="gos metàl·lic" type="RigidBody2D"]
+position = Vector2( 477.397, 335.079 )
 gravity_scale = 0.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 material = SubResource( 2 )
+scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 8 )
 animation = "camina"
+frame = 3
+playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 1.58115, 6.47066 )
+shape = SubResource( 9 )
+
+[node name="walls" type="Node" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="walls"]
+position = Vector2( 430, 402 )
+
+[node name="Sprite" type="Sprite" parent="walls/StaticBody2D"]
+position = Vector2( 82.9999, 0 )
+scale = Vector2( 15.9062, 1 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/StaticBody2D"]
+position = Vector2( 86.9999, -3 )
+shape = SubResource( 10 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="walls"]
+
+[node name="Sprite" type="Sprite" parent="walls/StaticBody2D2"]
+position = Vector2( 167.5, 230 )
+scale = Vector2( 1.07812, 4.375 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/StaticBody2D2"]
+position = Vector2( 190, 243 )
+shape = SubResource( 11 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="walls"]
+position = Vector2( 914.993, 340.451 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="walls/StaticBody2D3"]
+position = Vector2( 3, -2 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls/StaticBody2D3"]
+position = Vector2( -16.0617, -2.09501 )
+shape = SubResource( 12 )
+[connection signal="body_entered" from="." to="." method="_on_gos_metllic_body_entered"]
