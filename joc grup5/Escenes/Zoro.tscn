@@ -203,19 +203,17 @@ material = SubResource( 2 )
 position = Vector2( -2.96591, 1.12091 )
 frames = SubResource( 35 )
 animation = "corrents"
-frame = 2
+frame = 4
 playing = true
 
-[node name="caminant" type="CollisionShape2D" parent="."]
-visible = false
-position = Vector2( 0.342071, -1.5963 )
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2( -29.5947, -8.78118 )
 shape = SubResource( 36 )
 
 [node name="terra" type="Node" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="terra"]
 position = Vector2( 334.003, 27.3649 )
-rotation = -0.127409
 __meta__ = {
 "_edit_group_": true
 }
