@@ -219,7 +219,10 @@ shape = SubResource( 37 )
 [node name="terra" type="Node" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="terra"]
-position = Vector2( 360.175, 84.0937 )
+position = Vector2( 360.175, 83.3199 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="Sprite" type="Sprite" parent="terra/StaticBody2D"]
 position = Vector2( 84.6425, 420.381 )
@@ -227,5 +230,5 @@ scale = Vector2( 11.5861, 1 )
 texture = ExtResource( 7 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="terra/StaticBody2D"]
-position = Vector2( 84.9156, 416.014 )
+position = Vector2( 84.1418, 421.43 )
 shape = SubResource( 38 )
