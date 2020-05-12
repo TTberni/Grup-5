@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Joc grup5 "
-run/main_scene="res://Escenes/Zoro.tscn"
+run/main_scene="res://Enemics/gos metàl·lic.tscn"
 config/icon="res://icon.png"
 
 [input]
