@@ -69,7 +69,7 @@ extents = Vector2( 10, 126 )
 extents = Vector2( 11.836, 33.1212 )
 
 [node name="gos metàl·lic" type="RigidBody2D"]
-position = Vector2( 477.397, 335.079 )
+position = Vector2( 408.807, 337.786 )
 gravity_scale = 0.0
 script = ExtResource( 2 )
 __meta__ = {
@@ -81,7 +81,7 @@ material = SubResource( 2 )
 scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 8 )
 animation = "camina"
-frame = 3
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
