@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://Scripts/Zoro.gd" type="Script" id=1]
 [ext_resource path="res://Personatge/corre/3DS - One Piece Great Pirate Colosseum - Roronoa Zoro.png" type="Texture" id=2]
@@ -190,9 +190,6 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=36]
 extents = Vector2( 40.3121, 74.2384 )
 
-[sub_resource type="RectangleShape2D" id=37]
-extents = Vector2( 67.4967, 61.0647 )
-
 [sub_resource type="RectangleShape2D" id=38]
 extents = Vector2( 371.022, 30.4054 )
 
@@ -205,21 +202,20 @@ script = ExtResource( 1 )
 material = SubResource( 2 )
 position = Vector2( -2.96591, 1.12091 )
 frames = SubResource( 35 )
-animation = "espera"
-frame = 5
+animation = "corrents"
+frame = 2
+playing = true
 
 [node name="caminant" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 0.342071, -1.5963 )
 shape = SubResource( 36 )
-
-[node name="corrents" type="CollisionShape2D" parent="."]
-position = Vector2( 0.418121, 2.92685 )
-shape = SubResource( 37 )
 
 [node name="terra" type="Node" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="terra"]
-position = Vector2( 360.175, 83.3199 )
+position = Vector2( 334.003, 27.3649 )
+rotation = -0.127409
 __meta__ = {
 "_edit_group_": true
 }
