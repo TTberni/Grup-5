@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Enemic fantasma amb llanterna.png-737e326e13ca36740a6cc29b506b5d25.stex"
+path="res://.import/Rey patata.png-2e46f57ba9da046cf13cbf898f5c3eb6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites enemics/Enemic fantasma amb llanterna.png"
-dest_files=[ "res://.import/Enemic fantasma amb llanterna.png-737e326e13ca36740a6cc29b506b5d25.stex" ]
+source_file="res://frames enemics/Rey patata.png"
+dest_files=[ "res://.import/Rey patata.png-2e46f57ba9da046cf13cbf898f5c3eb6.stex" ]
 
 [params]
 

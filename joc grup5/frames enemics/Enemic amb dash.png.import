@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Rey patata.png-ed5963f0dffeb7bd393c159790607409.stex"
+path="res://.import/Enemic amb dash.png-369341e6415f3e37944dfd90625da7b6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites enemics/Rey patata.png"
-dest_files=[ "res://.import/Rey patata.png-ed5963f0dffeb7bd393c159790607409.stex" ]
+source_file="res://frames enemics/Enemic amb dash.png"
+dest_files=[ "res://.import/Enemic amb dash.png-369341e6415f3e37944dfd90625da7b6.stex" ]
 
 [params]
 

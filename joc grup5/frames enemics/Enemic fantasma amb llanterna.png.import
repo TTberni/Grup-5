@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/gos de metall.jpg-f4e1685895e6eb1e96296058c4eb4271.stex"
+path="res://.import/Enemic fantasma amb llanterna.png-94c759bd1608d3f77c8e4558e806bbd9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites enemics/gos de metall.jpg"
-dest_files=[ "res://.import/gos de metall.jpg-f4e1685895e6eb1e96296058c4eb4271.stex" ]
+source_file="res://frames enemics/Enemic fantasma amb llanterna.png"
+dest_files=[ "res://.import/Enemic fantasma amb llanterna.png-94c759bd1608d3f77c8e4558e806bbd9.stex" ]
 
 [params]
 
