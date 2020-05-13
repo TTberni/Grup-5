@@ -35,19 +35,15 @@ func anima(moviment):
 	if moviment.x == 0 and moviment.y == 0:
 		$AnimatedSprite.play("espera")
 		
-	if moviment.x < 0:
+	if moviment.x < 0 and is_on_floor():
 		$AnimatedSprite.play("corrents")
 		$AnimatedSprite.flip_h = false
 		
-	if moviment.x > 0:
+	if moviment.x > 0 and is_on_floor():
 		$AnimatedSprite.play("corrents")
 		$AnimatedSprite.flip_h = true
 	
-	if moviment.y < 0 and moviment.x < 0:
-		$AnimatedSprite.play("salta")
 	
-	if moviment.y < 0 and moviment.x > 0:
-		$AnimatedSprite.play("salta")
 
 
 
