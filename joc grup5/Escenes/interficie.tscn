@@ -21,8 +21,8 @@ __meta__ = {
 }
 
 [node name="Nivell de capitalisme" type="Label" parent="CanvasLayer/monedes"]
-margin_left = 101.986
-margin_right = 118.986
+margin_left = 100.357
+margin_right = 117.357
 margin_bottom = 14.0
 __meta__ = {
 "_edit_use_anchors_": false
@@ -42,10 +42,10 @@ __meta__ = {
 [node name="vida total" type="Label" parent="CanvasLayer/Vida"]
 anchor_top = 1.085
 anchor_bottom = 1.085
-margin_left = 50.2056
-margin_top = -13.9984
-margin_right = 66.2056
-margin_bottom = 0.00164604
+margin_left = 50.0
+margin_top = -18.19
+margin_right = 73.0
+margin_bottom = -0.190001
 __meta__ = {
 "_edit_use_anchors_": false
 }
