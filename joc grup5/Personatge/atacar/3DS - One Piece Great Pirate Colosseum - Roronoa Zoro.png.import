@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/excalibur.jpeg-f195ed5e5ac1762a721de99913014a4d.stex"
+path="res://.import/3DS - One Piece Great Pirate Colosseum - Roronoa Zoro.png-10b5b4450bebb86effe5bcdfe9c47d29.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Escenes/excalibur.jpeg"
-dest_files=[ "res://.import/excalibur.jpeg-f195ed5e5ac1762a721de99913014a4d.stex" ]
+source_file="res://Personatge/atacar/3DS - One Piece Great Pirate Colosseum - Roronoa Zoro.png"
+dest_files=[ "res://.import/3DS - One Piece Great Pirate Colosseum - Roronoa Zoro.png-10b5b4450bebb86effe5bcdfe9c47d29.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
@@ -30,5 +30,5 @@ process/HDR_as_SRGB=false
 process/invert_color=false
 stream=false
 size_limit=0
-detect_3d=true
+detect_3d=false
 svg/scale=1.0
