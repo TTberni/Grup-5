@@ -19,6 +19,10 @@ config/name="Joc grup5 "
 run/main_scene="res://Enemics/gos metàl·lic.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/height=326
+
 [input]
 
 salta={

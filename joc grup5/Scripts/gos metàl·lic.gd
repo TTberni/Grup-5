@@ -19,3 +19,7 @@ func anima(velocitat):
 		$AnimatedSprite.flip_h = true
 	if velocitat > 0:
 		$AnimatedSprite.flip_h = false
+
+
+func _on_gos_metllic_body_entered(body):
+	emit_signal("cop")
