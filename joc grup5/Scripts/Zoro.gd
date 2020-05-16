@@ -22,7 +22,7 @@ func mou(delta):
 	if Input.is_action_pressed("esquerra"):
 		velocitat.x += -vel_max
 	if Input.is_action_pressed("salta") and is_on_floor():
-		velocitat.y += -300
+		velocitat.y += -279
 	var moviment = move_and_slide(velocitat, Vector2.UP)
 	return moviment
 
