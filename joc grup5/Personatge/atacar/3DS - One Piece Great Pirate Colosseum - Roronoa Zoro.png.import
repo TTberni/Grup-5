@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Moneda.png-3a08aa5e96602426670bff0e30221632.stex"
+path="res://.import/3DS - One Piece Great Pirate Colosseum - Roronoa Zoro.png-10b5b4450bebb86effe5bcdfe9c47d29.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Objetes/Moneda.png"
-dest_files=[ "res://.import/Moneda.png-3a08aa5e96602426670bff0e30221632.stex" ]
+source_file="res://Personatge/atacar/3DS - One Piece Great Pirate Colosseum - Roronoa Zoro.png"
+dest_files=[ "res://.import/3DS - One Piece Great Pirate Colosseum - Roronoa Zoro.png-10b5b4450bebb86effe5bcdfe9c47d29.stex" ]
 
 [params]
 

@@ -1,0 +1,51 @@
+[gd_scene format=2]
+
+[node name="Interficie" type="Node"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="monedes" type="Label" parent="CanvasLayer"]
+anchor_left = -0.001
+anchor_top = 0.061
+anchor_right = -0.001
+anchor_bottom = 0.061
+margin_left = 0.301613
+margin_top = 0.250118
+margin_right = 64.3016
+margin_bottom = 14.2501
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "CAPITALISME x"
+max_lines_visible = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nivell de capitalisme" type="Label" parent="CanvasLayer/monedes"]
+margin_left = 100.357
+margin_right = 117.357
+margin_bottom = 14.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Vida" type="Label" parent="CanvasLayer"]
+margin_left = 3.8147e-06
+margin_top = 15.7944
+margin_right = 43.0
+margin_bottom = 29.7944
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "VIDA x"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="vida total" type="Label" parent="CanvasLayer/Vida"]
+anchor_top = 1.085
+anchor_bottom = 1.085
+margin_left = 50.0
+margin_top = -18.19
+margin_right = 73.0
+margin_bottom = -0.190001
+__meta__ = {
+"_edit_use_anchors_": false
+}
