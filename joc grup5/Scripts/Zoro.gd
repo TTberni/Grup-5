@@ -1,40 +1,53 @@
 extends KinematicBody2D
 
+#var automat = AnimationNodeStateMachinePlayback
 var velocitat = Vector2.ZERO
 var vel_max = 200
-var gravetat = Vector2(0, 450)
+var gravetat = Vector2(0, 300)
+var salt = 274
 signal atac
 
-#func _ready():
-#	$Area2D/CollisionShape2D.disabled
+func _ready():
+	pass
+#	automat =$AnimationTree.get("parameters/playback")
+#	$Sprites/ataca.hide()
+#	$Sprites/corre.hide()
+#	$Sprites/mort.hide()
+#	$Sprites/salta.hide()
+#	$"rang atac/CollisionShape2D".disabled
 func _process(delta):
 	var moviment = mou(delta)
 	anima(moviment)
-	
+
 func mou(delta):
 	velocitat.x = 0
+	
 	if is_on_floor():
-		velocitat.y =0
+		velocitat.y = 0
 	else:
-		velocitat += gravetat * delta
+		velocitat = gravetat *delta
+		
+		
 	if Input.is_action_pressed("dreta"):
 		velocitat.x += vel_max
 	if Input.is_action_pressed("esquerra"):
 		velocitat.x += -vel_max
 	if Input.is_action_pressed("salta") and is_on_floor():
-		velocitat.y += -279
+		velocitat.y -= salt
+#	if Input.is_action_pressed("atacar"): 
+#		$Area2D/CollisionShape2D.enabled()
+#		automat.travel("ataca")
 	var moviment = move_and_slide(velocitat, Vector2.UP)
 	return moviment
 
 		
 func anima(moviment):
-#	if Input.is_action_pressed("atacar"): 
-#		$Area2D/CollisionShape2D.is_one_way_collision_enabled()
-#		$AnimatedSprite.play("ataca")
+	
 	
 	if moviment.y < 0 and moviment.x > 0:
-		$AnimatedSprite.flip_h = true
 		$AnimatedSprite.play("salta")
+		$AnimatedSprite.flip_h = true
+		
 		
 	if moviment.y < 0 and moviment.x < 0:
 		$AnimatedSprite.flip_h = false
@@ -44,11 +57,11 @@ func anima(moviment):
 		$AnimatedSprite.play("espera")
 	
 	if  moviment.x < 0  and is_on_floor():
-		$AnimatedSprite.play("corrents")
+		$AnimatedSprite.play("corre")
 		$AnimatedSprite.flip_h = false
 		
-	if moviment.x > 0  and is_on_floor():
-		$AnimatedSprite.play("corrents")
+	if moviment.x > 0 and is_on_floor():
+		$AnimatedSprite.play("corre")
 		$AnimatedSprite.flip_h = true
 	
 
