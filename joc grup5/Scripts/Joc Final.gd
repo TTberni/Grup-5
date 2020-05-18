@@ -2,8 +2,6 @@ extends Node
 
 
 func _ready():
-	$Zoro.hide()
-	$Pantalla.hide()
 	$CONTROLS.hide()
 	$CONTROLS/Button.hide()
 	$CONTROLS/CanvasLayer/Label.hide()
@@ -33,7 +31,6 @@ func _on_CONTROLS_enrere():
 	$CONTROLS/CanvasLayer/Label4.hide()
 
 func _on_Menu_jugar():
-	$Zoro.show()
-	$Pantalla.show()
-	$Menu.hide()
+	get_tree().change_scene("res://Escenes/Pantalla.tscn")
+	
 	

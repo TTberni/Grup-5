@@ -3,12 +3,14 @@ extends KinematicBody2D
 #var automat = AnimationNodeStateMachinePlayback
 var velocitat = Vector2.ZERO
 var vel_max = 200
-var gravetat = Vector2(0, 300)
-var salt = 274
+var gravetat = Vector2(0, 400)
+var salt = Vector2 (0, -274)
 signal atac
+signal cop
 
 func _ready():
 	pass
+	
 #	automat =$AnimationTree.get("parameters/playback")
 #	$Sprites/ataca.hide()
 #	$Sprites/corre.hide()
@@ -25,7 +27,7 @@ func mou(delta):
 	if is_on_floor():
 		velocitat.y = 0
 	else:
-		velocitat = gravetat *delta
+		velocitat += gravetat*delta
 		
 		
 	if Input.is_action_pressed("dreta"):
@@ -33,7 +35,7 @@ func mou(delta):
 	if Input.is_action_pressed("esquerra"):
 		velocitat.x += -vel_max
 	if Input.is_action_pressed("salta") and is_on_floor():
-		velocitat.y -= salt
+		velocitat = + salt
 #	if Input.is_action_pressed("atacar"): 
 #		$Area2D/CollisionShape2D.enabled()
 #		automat.travel("ataca")
@@ -57,6 +59,7 @@ func anima(moviment):
 		$AnimatedSprite.play("espera")
 	
 	if  moviment.x < 0  and is_on_floor():
+#		
 		$AnimatedSprite.play("corre")
 		$AnimatedSprite.flip_h = false
 		
@@ -69,5 +72,6 @@ func anima(moviment):
 func _on_Area2D_area_entered(area):
 	emit_signal("atac")
 
-
-
+func _on_Interficie_mort():
+	$AnimatedSprite.play("mort")
+	
