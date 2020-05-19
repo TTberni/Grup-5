@@ -1,16 +1,14 @@
-extends RigidBody2D
+extends Area2D
 var constant = 300
 
-signal cop
-var vel_max = 0 
 func _process(delta):
 	mou()
 func mou():
-	 $"..".offset += 2
-	 if $"..".offset >= 534.74:
-		 $AnimatedSprite.flip_h = true
+	 $Path2D/PathFollow2D.offset += 2
+	 if $Path2D/PathFollow2D.offset >= 111.65:
+		 $Path2D/PathFollow2D/AnimatedSprite.flip_h = true
 	 else:
-		 $AnimatedSprite.flip_h = false
+		 $Path2D/PathFollow2D/AnimatedSprite.flip_h = false
 		
 		
 
@@ -21,5 +19,5 @@ func anima(velocitat):
 		$AnimatedSprite.flip_h = false
 
 
-func _on_gos_metllic_body_entered(body):
-	emit_signal("cop")
+
+ 

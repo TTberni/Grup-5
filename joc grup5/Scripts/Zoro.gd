@@ -9,7 +9,7 @@ signal atac
 signal cop
 
 func _ready():
-	pass
+	$"rang atac/CollisionShape2D".disabled
 	
 #	automat =$AnimationTree.get("parameters/playback")
 #	$Sprites/ataca.hide()
@@ -72,6 +72,3 @@ func anima(moviment):
 func _on_Area2D_area_entered(area):
 	emit_signal("atac")
 
-func _on_Interficie_mort():
-	$AnimatedSprite.play("mort")
-	
