@@ -131,7 +131,7 @@ animations = [ {
 "speed": 5.0
 }, {
 "frames": [ SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ) ],
-"loop": true,
+"loop": false,
 "name": "salta",
 "speed": 5.0
 } ]
@@ -160,7 +160,6 @@ material = SubResource( 3 )
 position = Vector2( 110.105, -0.829648 )
 frames = SubResource( 24 )
 animation = "corre"
-frame = 5
 playing = true
 
 [node name="espera" type="CollisionShape2D" parent="."]
