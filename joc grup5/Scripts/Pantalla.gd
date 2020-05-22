@@ -20,7 +20,7 @@ func _process(delta):
 func _on_moneda_body_entered(body):
 	capital = capital + 1 
 	$Interficie.actualitza_monedes(capital)
-#	$moneda.queue_free()
+	$moneda.queue_free()
 	
 
 

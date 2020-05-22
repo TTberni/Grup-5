@@ -61,7 +61,7 @@ animations = [ {
 "frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
 "loop": true,
 "name": "camina",
-"speed": 20.0
+"speed": 15.0
 } ]
 
 [node name="Path2D" type="Path2D"]
@@ -95,11 +95,11 @@ one_way_collision_margin = 0.0
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="PathFollow2D/Area2D"]
 material = SubResource( 4 )
-position = Vector2( 405.715, 332.278 )
+position = Vector2( 403.874, 338.526 )
 rotation = 5.68891e-10
-scale = Vector2( 1.5, 1.5 )
+scale = Vector2( 1.16702, 1.1952 )
 frames = SubResource( 10 )
 animation = "camina"
-frame = 3
+frame = 1
 playing = true
 [connection signal="body_entered" from="PathFollow2D/Area2D" to="." method="_on_Area2D_body_entered"]
