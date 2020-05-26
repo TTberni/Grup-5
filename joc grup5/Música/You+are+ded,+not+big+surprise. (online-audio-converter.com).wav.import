@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/You+are+ded,+not+big+surprise. (online-audio-converter.com).wav-5125de946ca100a0538a3b8738042122.sample"
+
+[deps]
+
+source_file="res://Música/You+are+ded,+not+big+surprise. (online-audio-converter.com).wav"
+dest_files=[ "res://.import/You+are+ded,+not+big+surprise. (online-audio-converter.com).wav-5125de946ca100a0538a3b8738042122.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
