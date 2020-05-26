@@ -12,8 +12,7 @@ func _process(delta):
 		$Interficie.actualitza_vida(vides)
 		$Interficie.actualitza_monedes(capital)
 	if vides == 0:
-		$Zoro.mor()
-		$Timer.start()
+		get_tree().change_scene("res://Escenes/game_over.tscn")
 		
 		
 
@@ -25,8 +24,8 @@ func _on_moneda_body_entered(body):
 
 
 
-func _on_Timer_timeout():
-	get_tree().change_scene("res://Escenes/game_over.tscn")
+
+	
 
 
 
@@ -34,3 +33,22 @@ func _on_Area2D_cop():
 	vides = vides -1 
 	$Interficie.actualitza_vida(vides)
 	print('caca')
+
+
+func _on_AudioStreamPlayer_finished():
+	$AudioStreamPlayer.play()
+
+
+func _on_Area2D2_body_entered(body):
+	vides = 0
+	$Interficie.actualitza_vida(vides)
+
+
+func _on_Area2D3_body_entered(body):
+	vides = 0
+	$Interficie.actualitza_vida(vides)
+
+
+func _on_Area2D4_body_entered(body):
+	vides = 0
+	$Interficie.actualitza_vida(vides)
