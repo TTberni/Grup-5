@@ -133,7 +133,7 @@ script = ExtResource( 1 )
 material = SubResource( 3 )
 position = Vector2( 0.693476, -0.357421 )
 frames = SubResource( 21 )
-frame = 13
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Area2D"]
