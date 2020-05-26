@@ -1,19 +1,23 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://Scripts/Zoro.gd" type="Script" id=1]
 [ext_resource path="res://Personatge/corre/3DS - One Piece Great Pirate Colosseum - Roronoa Zoro.png" type="Texture" id=2]
 [ext_resource path="res://Personatge/Mort/3DS - One Piece Great Pirate Colosseum - Roronoa Zoro.png" type="Texture" id=3]
+[ext_resource path="res://Personatge/atacar/3DS - One Piece Great Pirate Colosseum - Roronoa Zoro.png" type="Texture" id=4]
 [ext_resource path="res://Personatge/salta/3DS - One Piece Great Pirate Colosseum - Roronoa Zoro.png" type="Texture" id=5]
 [ext_resource path="res://Personatge/Espera/3DS - One Piece Great Pirate Colosseum - Roronoa Zoro.png" type="Texture" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 57.8056, 85.5953 )
 
-[sub_resource type="Shader" id=2]
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 54.1835, 86.9482 )
+
+[sub_resource type="Shader" id=3]
 code = "shader_type canvas_item;
 
 uniform vec4 color_escollit : hint_color;
-uniform vec4 color_escollit_2 : hint_color;
+uniform vec4 color_escollit2 : hint_color;
 
 bool close_enough(vec4 color, vec4 reference){
 	return length(color - reference) < 0.2;
@@ -21,126 +25,263 @@ bool close_enough(vec4 color, vec4 reference){
 
 void fragment(){
 	vec4 color_pixel = texture(TEXTURE, UV);
-	if (close_enough(color_pixel, color_escollit) || close_enough(color_pixel, color_escollit_2)){
+	if (close_enough(color_pixel, color_escollit) || close_enough(color_pixel, color_escollit2)){
 		COLOR = vec4(0,0,0,0);
 	}else{
 		COLOR = color_pixel;
 		}
 	}"
 
-[sub_resource type="ShaderMaterial" id=3]
-shader = SubResource( 2 )
+[sub_resource type="ShaderMaterial" id=4]
+shader = SubResource( 3 )
 shader_param/color_escollit = Color( 0.705882, 0.705882, 1, 1 )
-shader_param/color_escollit_2 = Color( 0, 0.501961, 0.501961, 1 )
+shader_param/color_escollit2 = Color( 0, 0.501961, 0.501961, 1 )
 
-[sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 6 )
-region = Rect2( 0, 0, 200, 174 )
+[sub_resource type="Shader" id=5]
+code = "shader_type canvas_item;
 
-[sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 6 )
-region = Rect2( 200, 0, 200, 174 )
+uniform vec4 color_escollit : hint_color;
+uniform vec4 color_escollit2 : hint_color;
 
-[sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 6 )
-region = Rect2( 400, 0, 200, 174 )
+bool close_enough(vec4 color, vec4 reference){
+	return length(color - reference) < 0.2;
+}
 
-[sub_resource type="AtlasTexture" id=7]
-atlas = ExtResource( 6 )
-region = Rect2( 600, 0, 200, 174 )
+void fragment(){
+	vec4 color_pixel = texture(TEXTURE, UV);
+	if (close_enough(color_pixel, color_escollit) || close_enough(color_pixel, color_escollit2)){
+		COLOR = vec4(0,0,0,0);
+	}else{
+		COLOR = color_pixel;
+		}
+	}"
 
-[sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 6 )
-region = Rect2( 800, 0, 200, 174 )
+[sub_resource type="ShaderMaterial" id=6]
+shader = SubResource( 5 )
+shader_param/color_escollit = Color( 0.705882, 0.705882, 1, 1 )
+shader_param/color_escollit2 = Color( 0, 0.501961, 0.501961, 1 )
 
-[sub_resource type="AtlasTexture" id=9]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 160, 132 )
+[sub_resource type="Shader" id=7]
+code = "shader_type canvas_item;
 
-[sub_resource type="AtlasTexture" id=10]
-atlas = ExtResource( 2 )
-region = Rect2( 160, 0, 160, 132 )
+uniform vec4 color_escollit : hint_color;
+uniform vec4 color_escollit2 : hint_color;
 
-[sub_resource type="AtlasTexture" id=11]
-atlas = ExtResource( 2 )
-region = Rect2( 320, 0, 160, 132 )
+bool close_enough(vec4 color, vec4 reference){
+	return length(color - reference) < 0.2;
+}
 
-[sub_resource type="AtlasTexture" id=12]
-atlas = ExtResource( 2 )
-region = Rect2( 480, 0, 160, 132 )
+void fragment(){
+	vec4 color_pixel = texture(TEXTURE, UV);
+	if (close_enough(color_pixel, color_escollit) || close_enough(color_pixel, color_escollit2)){
+		COLOR = vec4(0,0,0,0);
+	}else{
+		COLOR = color_pixel;
+		}
+	}"
 
-[sub_resource type="AtlasTexture" id=13]
-atlas = ExtResource( 2 )
-region = Rect2( 640, 0, 160, 132 )
+[sub_resource type="ShaderMaterial" id=8]
+shader = SubResource( 7 )
+shader_param/color_escollit = Color( 0.705882, 0.705882, 1, 1 )
+shader_param/color_escollit2 = Color( 0, 0.501961, 0.501961, 1 )
 
-[sub_resource type="AtlasTexture" id=14]
-atlas = ExtResource( 2 )
-region = Rect2( 800, 0, 160, 132 )
+[sub_resource type="Shader" id=9]
+code = "shader_type canvas_item;
 
-[sub_resource type="AtlasTexture" id=15]
-atlas = ExtResource( 3 )
-region = Rect2( 176, 0, 176, 120 )
+uniform vec4 color_escollit : hint_color;
+uniform vec4 color_escollit2 : hint_color;
 
-[sub_resource type="AtlasTexture" id=16]
-atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 176, 120 )
+bool close_enough(vec4 color, vec4 reference){
+	return length(color - reference) < 0.2;
+}
 
-[sub_resource type="AtlasTexture" id=17]
-atlas = ExtResource( 3 )
-region = Rect2( 352, 0, 176, 120 )
+void fragment(){
+	vec4 color_pixel = texture(TEXTURE, UV);
+	if (close_enough(color_pixel, color_escollit) || close_enough(color_pixel, color_escollit2)){
+		COLOR = vec4(0,0,0,0);
+	}else{
+		COLOR = color_pixel;
+		}
+	}"
 
-[sub_resource type="AtlasTexture" id=18]
-atlas = ExtResource( 5 )
-region = Rect2( 0, 0, 170, 191 )
+[sub_resource type="ShaderMaterial" id=10]
+shader = SubResource( 9 )
+shader_param/color_escollit = Color( 0.705882, 0.705882, 1, 1 )
+shader_param/color_escollit2 = Color( 0, 0.501961, 0.501961, 1 )
 
-[sub_resource type="AtlasTexture" id=19]
-atlas = ExtResource( 5 )
-region = Rect2( 170, 0, 170, 191 )
+[sub_resource type="Shader" id=11]
+code = "shader_type canvas_item;
 
-[sub_resource type="AtlasTexture" id=20]
-atlas = ExtResource( 5 )
-region = Rect2( 340, 0, 170, 191 )
+uniform vec4 color_escollit : hint_color;
+uniform vec4 color_escollit2 : hint_color;
 
-[sub_resource type="AtlasTexture" id=21]
-atlas = ExtResource( 5 )
-region = Rect2( 510, 0, 170, 191 )
+bool close_enough(vec4 color, vec4 reference){
+	return length(color - reference) < 0.2;
+}
 
-[sub_resource type="AtlasTexture" id=22]
-atlas = ExtResource( 5 )
-region = Rect2( 680, 0, 170, 191 )
+void fragment(){
+	vec4 color_pixel = texture(TEXTURE, UV);
+	if (close_enough(color_pixel, color_escollit) || close_enough(color_pixel, color_escollit2)){
+		COLOR = vec4(0,0,0,0);
+	}else{
+		COLOR = color_pixel;
+		}
+	}"
 
-[sub_resource type="AtlasTexture" id=23]
-atlas = ExtResource( 5 )
-region = Rect2( 850, 0, 170, 191 )
+[sub_resource type="ShaderMaterial" id=12]
+shader = SubResource( 11 )
+shader_param/color_escollit = Color( 0.705882, 0.705882, 1, 1 )
+shader_param/color_escollit2 = Color( 0, 0.501961, 0.501961, 1 )
 
-[sub_resource type="SpriteFrames" id=24]
-animations = [ {
-"frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ) ],
-"loop": true,
-"name": "espera",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
-"loop": true,
-"name": "corre",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
-"loop": false,
-"name": "mort",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ) ],
-"loop": false,
-"name": "salta",
-"speed": 5.0
-} ]
+[sub_resource type="Animation" id=13]
+resource_name = "atac"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("atac:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4 ]
+}
 
-[sub_resource type="RectangleShape2D" id=25]
-extents = Vector2( 40.906, 84.797 )
+[sub_resource type="Animation" id=14]
+resource_name = "corre"
+length = 0.625
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("animacio_corre:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
 
-[sub_resource type="RectangleShape2D" id=26]
-extents = Vector2( 54.1835, 63.4831 )
+[sub_resource type="Animation" id=15]
+resource_name = "espera"
+length = 1.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Espera:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.187515, 0.383631, 0.56387, 0.746358, 0.92704, 1.10197 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 2, 1, 0 ]
+}
+
+[sub_resource type="Animation" id=16]
+resource_name = "mort"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("mort:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.251985, 0.477684 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 0, 2 ]
+}
+
+[sub_resource type="Animation" id=17]
+resource_name = "salta"
+length = 0.7
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("salta:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.117047, 0.236968, 0.363764, 0.494672, 0.635777 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
+
+[sub_resource type="AnimationNodeAnimation" id=18]
+animation = "atac"
+
+[sub_resource type="AnimationNodeAnimation" id=19]
+animation = "corre"
+
+[sub_resource type="AnimationNodeAnimation" id=20]
+animation = "espera"
+
+[sub_resource type="AnimationNodeAnimation" id=21]
+animation = "mort"
+
+[sub_resource type="AnimationNodeAnimation" id=22]
+animation = "salta"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=23]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=24]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=25]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=26]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=27]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=28]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=29]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=30]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=31]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=32]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=33]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=34]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=35]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=36]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=37]
+
+[sub_resource type="AnimationNodeStateMachine" id=38]
+states/atac/node = SubResource( 18 )
+states/atac/position = Vector2( 813, 96 )
+states/corre/node = SubResource( 19 )
+states/corre/position = Vector2( 529, -14 )
+states/espera/node = SubResource( 20 )
+states/espera/position = Vector2( 448, 135 )
+states/mort/node = SubResource( 21 )
+states/mort/position = Vector2( 288, 96 )
+states/salta/node = SubResource( 22 )
+states/salta/position = Vector2( 529, 320 )
+transitions = [ "espera", "corre", SubResource( 23 ), "corre", "espera", SubResource( 24 ), "espera", "mort", SubResource( 25 ), "espera", "salta", SubResource( 26 ), "espera", "atac", SubResource( 27 ), "atac", "espera", SubResource( 28 ), "corre", "atac", SubResource( 29 ), "corre", "mort", SubResource( 30 ), "salta", "mort", SubResource( 31 ), "atac", "mort", SubResource( 32 ), "atac", "corre", SubResource( 33 ), "atac", "salta", SubResource( 34 ), "salta", "espera", SubResource( 35 ), "salta", "corre", SubResource( 36 ), "corre", "salta", SubResource( 37 ) ]
+start_node = "espera"
+graph_offset = Vector2( 0, -44.8586 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=39]
 
 [node name="Zoro" type="KinematicBody2D"]
 position = Vector2( 276.755, 274.74 )
@@ -155,17 +296,58 @@ position = Vector2( 1.95062, -0.437012 )
 shape = SubResource( 1 )
 disabled = true
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-material = SubResource( 3 )
-position = Vector2( 110.105, -0.829648 )
-frames = SubResource( 24 )
-animation = "corre"
-playing = true
-
-[node name="espera" type="CollisionShape2D" parent="."]
-position = Vector2( 107.616, -0.437072 )
-shape = SubResource( 25 )
-
 [node name="corre" type="CollisionShape2D" parent="."]
-position = Vector2( 92.0553, -3.60999 )
-shape = SubResource( 26 )
+position = Vector2( 123.938, 0.590027 )
+shape = SubResource( 2 )
+
+[node name="animacio_corre" type="Sprite" parent="."]
+visible = false
+material = SubResource( 4 )
+position = Vector2( 137.198, 24.0375 )
+texture = ExtResource( 2 )
+hframes = 6
+frame = 5
+
+[node name="atac" type="Sprite" parent="."]
+visible = false
+material = SubResource( 6 )
+position = Vector2( 107.324, 1.47021 )
+texture = ExtResource( 4 )
+hframes = 5
+frame = 4
+
+[node name="salta" type="Sprite" parent="."]
+visible = false
+material = SubResource( 8 )
+position = Vector2( 118.315, 7.33209 )
+texture = ExtResource( 5 )
+hframes = 6
+frame = 4
+
+[node name="mort" type="Sprite" parent="."]
+visible = false
+material = SubResource( 10 )
+position = Vector2( 139.925, 24.7878 )
+texture = ExtResource( 3 )
+hframes = 3
+frame = 2
+
+[node name="Espera" type="Sprite" parent="."]
+material = SubResource( 12 )
+position = Vector2( 134.989, -0.332581 )
+texture = ExtResource( 6 )
+hframes = 5
+frame = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/atac = SubResource( 13 )
+anims/corre = SubResource( 14 )
+anims/espera = SubResource( 15 )
+anims/mort = SubResource( 16 )
+anims/salta = SubResource( 17 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 38 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 39 )
