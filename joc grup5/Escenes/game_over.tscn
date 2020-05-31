@@ -22,16 +22,14 @@ margin_top = 317.249
 margin_right = 615.389
 margin_bottom = 371.249
 custom_fonts/font = SubResource( 1 )
-custom_colors/font_color_disabled = Color( 0.835294, 0.113725, 0.113725, 1 )
-custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.905882, 0.0941176, 0.0941176, 1 )
 custom_colors/font_color_pressed = Color( 0.976471, 0.960784, 0.960784, 1 )
-text = "LAST TRY?"
+text = "AGAIN?"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
-autoplay = true
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
