@@ -280,7 +280,7 @@ states/salta/node = SubResource( 22 )
 states/salta/position = Vector2( 529, 320 )
 transitions = [ "espera", "corre", SubResource( 23 ), "corre", "espera", SubResource( 24 ), "espera", "mort", SubResource( 25 ), "espera", "salta", SubResource( 26 ), "espera", "atac", SubResource( 27 ), "atac", "espera", SubResource( 28 ), "corre", "atac", SubResource( 29 ), "corre", "mort", SubResource( 30 ), "salta", "mort", SubResource( 31 ), "atac", "mort", SubResource( 32 ), "atac", "corre", SubResource( 33 ), "atac", "salta", SubResource( 34 ), "salta", "espera", SubResource( 35 ), "salta", "corre", SubResource( 36 ), "corre", "salta", SubResource( 37 ) ]
 start_node = "espera"
-graph_offset = Vector2( 0, -44.8586 )
+graph_offset = Vector2( 310, -114.323 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=39]
 
