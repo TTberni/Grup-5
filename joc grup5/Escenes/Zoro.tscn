@@ -244,6 +244,7 @@ animation = "salta"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=28]
 switch_mode = 2
+auto_advance = true
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=29]
 
@@ -273,14 +274,14 @@ states/atac/position = Vector2( 813, 96 )
 states/corre/node = SubResource( 19 )
 states/corre/position = Vector2( 529, -23 )
 states/espera/node = SubResource( 20 )
-states/espera/position = Vector2( 633, 133 )
+states/espera/position = Vector2( 607, 127 )
 states/mort/node = SubResource( 21 )
 states/mort/position = Vector2( 288, 96 )
 states/salta/node = SubResource( 22 )
 states/salta/position = Vector2( 529, 320 )
 transitions = [ "espera", "corre", SubResource( 23 ), "corre", "espera", SubResource( 24 ), "espera", "mort", SubResource( 25 ), "espera", "salta", SubResource( 26 ), "espera", "atac", SubResource( 27 ), "atac", "espera", SubResource( 28 ), "corre", "atac", SubResource( 29 ), "corre", "mort", SubResource( 30 ), "salta", "mort", SubResource( 31 ), "atac", "mort", SubResource( 32 ), "atac", "corre", SubResource( 33 ), "atac", "salta", SubResource( 34 ), "salta", "espera", SubResource( 35 ), "salta", "corre", SubResource( 36 ), "corre", "salta", SubResource( 37 ) ]
 start_node = "espera"
-graph_offset = Vector2( 0, -44.8586 )
+graph_offset = Vector2( 249.025, -8.29861 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=39]
 
@@ -295,7 +296,6 @@ position = Vector2( 3.77356, -0.7547 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="rang atac"]
 position = Vector2( 24.0338, 1.7713 )
 shape = SubResource( 1 )
-disabled = true
 
 [node name="corre" type="CollisionShape2D" parent="."]
 position = Vector2( 123.938, 0.590027 )
@@ -315,7 +315,6 @@ material = SubResource( 6 )
 position = Vector2( 100.331, -0.370061 )
 texture = ExtResource( 4 )
 hframes = 5
-frame = 2
 
 [node name="salta" type="Sprite" parent="."]
 visible = false
@@ -338,9 +337,10 @@ material = SubResource( 12 )
 position = Vector2( 122.963, 3.0116 )
 texture = ExtResource( 6 )
 hframes = 5
-frame = 3
+frame = 1
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+method_call_mode = 1
 anims/atac = SubResource( 13 )
 anims/corre = SubResource( 14 )
 anims/espera = SubResource( 15 )

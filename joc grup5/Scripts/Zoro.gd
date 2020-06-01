@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-#var automat = AnimationNodeStateMachinePlayback
+var automat = AnimationNodeStateMachinePlayback
 var velocitat = Vector2.ZERO
 var vel_max = 200
 var gravetat = Vector2(0, 400)
@@ -9,16 +9,12 @@ signal atac
 signal cop
 
 func _ready():
-	$"rang atac/CollisionShape2D".disabled
-	
-#	automat =$AnimationTree.get("parameters/playback")
-#	$Sprites/ataca.hide()
-#	$Sprites/corre.hide()
-#	$Sprites/salta.hide()
-#	$"rang atac/CollisionShape2D".disabled
+	$"rang atac/CollisionShape2D".disabled = true
+	automat =$AnimationTree.get("parameters/playback")
+#	
 func _process(delta):
 	var moviment = mou(delta)
-	
+
 
 func mou(delta):
 	velocitat.x = 0
@@ -31,21 +27,18 @@ func mou(delta):
 		
 	if Input.is_action_pressed("dreta"):
 		velocitat.x += vel_max
+		automat.travel('corre')
 	if Input.is_action_pressed("esquerra"):
 		velocitat.x += -vel_max
+		automat.travel('corre')
 	if Input.is_action_pressed("salta") and is_on_floor():
 		velocitat = + salt
-#	if Input.is_action_pressed("atacar"): 
-#		$Area2D/CollisionShape2D.enabled()
-#		automat.travel("ataca")
+		automat.travel('salta')
+	if Input.is_action_pressed("atacar"): 
+		$"rang atac/CollisionShape2D".disabled = false
+		automat.travel("atac")
 	var moviment = move_and_slide(velocitat, Vector2.UP)
 	return moviment
-
-		
-
-	
-
-		
 
 
 
