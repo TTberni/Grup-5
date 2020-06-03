@@ -194,7 +194,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.251985, 0.477684 ),
+"times": PoolRealArray( 0, 0.218181, 0.442476 ),
 "transitions": PoolRealArray( 1, 1, 1 ),
 "update": 1,
 "values": [ 1, 0, 2 ]
@@ -203,7 +203,6 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=17]
 resource_name = "salta"
 length = 0.7
-loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("salta:frame")
 tracks/0/interp = 1
@@ -211,7 +210,7 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.117047, 0.236968, 0.363764, 0.494672, 0.635777 ),
+"times": PoolRealArray( 0.0250889, 0.170705, 0.301876, 0.426965, 0.564218, 0.683985 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 1, 2, 3, 4, 5 ]
@@ -307,7 +306,7 @@ material = SubResource( 4 )
 position = Vector2( 137.198, 24.0375 )
 texture = ExtResource( 2 )
 hframes = 6
-frame = 1
+frame = 5
 
 [node name="atac" type="Sprite" parent="."]
 visible = false
@@ -315,6 +314,7 @@ material = SubResource( 6 )
 position = Vector2( 100.331, -0.370061 )
 texture = ExtResource( 4 )
 hframes = 5
+frame = 4
 
 [node name="salta" type="Sprite" parent="."]
 visible = false
@@ -322,10 +322,9 @@ material = SubResource( 8 )
 position = Vector2( 118.315, 7.33209 )
 texture = ExtResource( 5 )
 hframes = 6
-frame = 4
+frame = 5
 
 [node name="mort" type="Sprite" parent="."]
-visible = false
 material = SubResource( 10 )
 position = Vector2( 139.925, 24.7878 )
 texture = ExtResource( 3 )
@@ -333,11 +332,12 @@ hframes = 3
 frame = 2
 
 [node name="Espera" type="Sprite" parent="."]
+visible = false
 material = SubResource( 12 )
 position = Vector2( 122.963, 3.0116 )
 texture = ExtResource( 6 )
 hframes = 5
-frame = 1
+frame = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 method_call_mode = 1
