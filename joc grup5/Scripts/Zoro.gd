@@ -34,7 +34,7 @@ func mou(delta):
 	if Input.is_action_pressed("esquerra"):
 		velocitat.x += -vel_max
 		automat.travel("corre")
-		scale.x = scale.x *-1
+		scale.x = 0.5
 		
 	if Input.is_action_pressed("salta") and is_on_floor():
 		velocitat = + salt
