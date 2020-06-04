@@ -646,3 +646,4 @@ tree_root = SubResource( 38 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 39 )
+[connection signal="body_entered" from="rang atac" to="." method="_on_rang_atac_body_entered"]

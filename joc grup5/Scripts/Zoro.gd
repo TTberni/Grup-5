@@ -29,20 +29,30 @@ func mou(delta):
 	if Input.is_action_pressed("dreta"):
 		velocitat.x += vel_max
 		automat.travel("corre")
+		$"rang atac/CollisionShape2D".disabled = true
 		scale.x = -0.5
 		
 	if Input.is_action_pressed("esquerra"):
 		velocitat.x += -vel_max
 		automat.travel("corre")
+		$"rang atac/CollisionShape2D".disabled = true
 		scale.x = 0.5
 		
 	if Input.is_action_pressed("salta") and is_on_floor():
 		velocitat = + salt
 		automat.travel("salta")
+		$"rang atac/CollisionShape2D".disabled = true
+		
 	if Input.is_action_pressed("atacar"): 
+		$"rang atac/CollisionShape2D".disabled = false
 		automat.travel("atac")
 		
 	var moviment = move_and_slide(velocitat, Vector2.UP)
 	return moviment
 
+	
+
+
+func _on_rang_atac_body_entered(body):
+	emit_signal("atac")
 	

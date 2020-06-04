@@ -1,6 +1,6 @@
 extends StaticBody2D
 var capital = 0
-var vides = 4
+var vides = 5222222222
 func _ready():
 	$Interficie.actualitza_monedes(capital)
 	$Interficie.actualitza_vida(vides)
@@ -52,3 +52,7 @@ func _on_Area2D3_body_entered(body):
 func _on_Area2D4_body_entered(body):
 	vides = 0
 	$Interficie.actualitza_vida(vides)
+
+
+func _on_Zoro_atac(body):
+	body.queue_free()

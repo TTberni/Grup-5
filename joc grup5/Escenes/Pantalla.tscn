@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://map/ejmtile.bmp" type="Texture" id=1]
 [ext_resource path="res://map/32x32_map_tile%20v1.1_0.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Scripts/Pantalla.gd" type="Script" id=7]
 [ext_resource path="res://Objetes/fons.jpg" type="Texture" id=8]
 [ext_resource path="res://Música/Doom OST - E1M1 - At Dooms Gate (online-audio-converter.com).wav" type="AudioStream" id=9]
+[ext_resource path="res://Enemics/Dash_grandpa.tscn" type="PackedScene" id=10]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -238,7 +239,7 @@ extents = Vector2( 784.478, 10 )
 script = ExtResource( 7 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 838.607, -77.261 )
+position = Vector2( 846.931, -63.8712 )
 scale = Vector2( 0.975698, 0.959563 )
 texture = ExtResource( 8 )
 region_enabled = true
@@ -261,12 +262,12 @@ current = true
 
 [node name="Interficie" parent="." instance=ExtResource( 4 )]
 
-[node name="router" type="Node" parent="."]
-
 [node name="moneda" parent="." instance=ExtResource( 5 )]
 position = Vector2( 218.939, 206.776 )
 
-[node name="Area2D" parent="." instance=ExtResource( 6 )]
+[node name="router" type="Node" parent="moneda"]
+
+[node name="gos_metal·lic" parent="." instance=ExtResource( 6 )]
 position = Vector2( 566.948, -119.357 )
 
 [node name="Timer" type="Timer" parent="."]
@@ -274,6 +275,8 @@ wait_time = 0.5
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
+volume_db = -9.087
+autoplay = true
 
 [node name="Area2D2" type="Area2D" parent="."]
 position = Vector2( 2326.6, 429.422 )
@@ -294,10 +297,16 @@ position = Vector2( 6863.59, 654.559 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4"]
 shape = SubResource( 22 )
+
+[node name="Path2D" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1256.43, -36.7313 )
+scale = Vector2( 0.911371, 1.03367 )
+[connection signal="atac" from="Zoro" to="." method="_on_Zoro_atac"]
 [connection signal="body_entered" from="moneda" to="." method="_on_moneda_body_entered"]
-[connection signal="cop" from="Area2D" to="." method="_on_Area2D_cop"]
+[connection signal="cop" from="gos_metal·lic" to="." method="_on_Area2D_cop"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_Area2D2_body_entered"]
 [connection signal="body_entered" from="Area2D3" to="." method="_on_Area2D3_body_entered"]
 [connection signal="body_entered" from="Area2D4" to="." method="_on_Area2D4_body_entered"]
+[connection signal="cop" from="Path2D" to="." method="_on_Area2D_cop"]

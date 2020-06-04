@@ -4,9 +4,9 @@
 [ext_resource path="res://Scripts/masa_lila.gd" type="Script" id=2]
 [ext_resource path="res://Enemics/masa-lila2.gd" type="Script" id=3]
 
-[sub_resource type="Curve2D" id=1]
+[sub_resource type="Curve2D" id=14]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 400.861, 192.983, 0, 0, 0, 0, 668.826, 189.903, 0, 0, 0, 0, 399.834, 190.416 )
+"points": PoolVector2Array( 0, 0, 0, 0, -51.5989, 1.28312, 0, 0, 0, 0, 145.078, -0.932957, 0, 0, 0, 0, -51.5989, 0.175079 )
 }
 
 [sub_resource type="Shader" id=2]
@@ -28,7 +28,7 @@ void fragment(){
 		}
 	}"
 
-[sub_resource type="ShaderMaterial" id=3]
+[sub_resource type="ShaderMaterial" id=15]
 shader = SubResource( 2 )
 shader_param/color_escollit = Color( 0, 0.0745098, 0.498039, 1 )
 shader_param/color_escollit_2 = Color( 0, 0.0745098, 0.498039, 1 )
@@ -73,7 +73,7 @@ region = Rect2( 1592, 0, 199, 172 )
 atlas = ExtResource( 1 )
 region = Rect2( 1791, 0, 199, 172 )
 
-[sub_resource type="SpriteFrames" id=14]
+[sub_resource type="SpriteFrames" id=16]
 animations = [ {
 "frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
 "loop": true,
@@ -81,32 +81,37 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=15]
+[sub_resource type="RectangleShape2D" id=17]
 extents = Vector2( 34.1268, 33.0511 )
 
 [node name="Path2D" type="Path2D"]
-curve = SubResource( 1 )
+position = Vector2( 269.843, 1.02669 )
+curve = SubResource( 14 )
 script = ExtResource( 3 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="."]
-position = Vector2( 664.962, 189.953 )
+position = Vector2( 142.5, -0.901268 )
 rotation = 0.00474087
-offset = 263.09
+offset = 193.11
 rotate = false
 
 [node name="Area2D" type="Area2D" parent="PathFollow2D"]
+position = Vector2( 1.39552, 0.6297 )
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="PathFollow2D/Area2D"]
-material = SubResource( 3 )
+material = SubResource( 15 )
 position = Vector2( 1.17157, -1.21217 )
 scale = Vector2( 0.437366, 0.436071 )
-frames = SubResource( 14 )
+frames = SubResource( 16 )
 animation = "camina"
-frame = 7
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Area2D"]
 position = Vector2( 0.85579, -1.07913 )
-shape = SubResource( 15 )
+shape = SubResource( 17 )
 [connection signal="body_entered" from="PathFollow2D/Area2D" to="." method="_on_Area2D_body_entered"]
