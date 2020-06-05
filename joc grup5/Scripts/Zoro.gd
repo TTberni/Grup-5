@@ -30,13 +30,13 @@ func mou(delta):
 		velocitat.x += vel_max
 		automat.travel("corre")
 		$"rang atac/CollisionShape2D".disabled = true
-		scale.x = -0.5
+		scale.x = -0.5*sign(scale.y)
 		
 	if Input.is_action_pressed("esquerra"):
 		velocitat.x += -vel_max
 		automat.travel("corre")
 		$"rang atac/CollisionShape2D".disabled = true
-		scale.x = 0.5
+		scale.x = 0.5*sign(scale.y)
 		
 	if Input.is_action_pressed("salta") and is_on_floor():
 		velocitat = + salt
