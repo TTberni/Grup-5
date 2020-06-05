@@ -239,11 +239,18 @@ extents = Vector2( 784.478, 10 )
 script = ExtResource( 7 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 846.931, -63.8712 )
+position = Vector2( 845.639, -65.1636 )
 scale = Vector2( 0.975698, 0.959563 )
 texture = ExtResource( 8 )
 region_enabled = true
 region_rect = Rect2( -4.63066, -464.973, 16547.2, 1544.17 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 925.765, -127.197 )
+scale = Vector2( 0.975698, 0.959563 )
+texture = ExtResource( 8 )
+region_enabled = true
+region_rect = Rect2( 1.10858, -464.973, 16541.5, 1544.17 )
 
 [node name="TileMap" type="TileMap" parent="."]
 material = SubResource( 2 )
@@ -263,9 +270,124 @@ current = true
 [node name="Interficie" parent="." instance=ExtResource( 4 )]
 
 [node name="moneda" parent="." instance=ExtResource( 5 )]
-position = Vector2( 218.939, 206.776 )
+position = Vector2( 571.193, 272.493 )
 
-[node name="router" type="Node" parent="moneda"]
+[node name="moneda2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1259.29, 129.234 )
+
+[node name="moneda3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1309.69, 127.942 )
+
+[node name="moneda4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1351.05, 129.234 )
+
+[node name="moneda5" parent="." instance=ExtResource( 5 )]
+position = Vector2( 1388.53, 129.234 )
+
+[node name="moneda6" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2202.71, 161.543 )
+
+[node name="moneda7" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2235.02, 120.188 )
+
+[node name="moneda8" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2288.01, 139.573 )
+
+[node name="moneda9" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2316.44, 199.022 )
+
+[node name="moneda10" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2527.09, 210.653 )
+
+[node name="moneda11" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2546.48, 168.005 )
+
+[node name="moneda12" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2572.33, 120.188 )
+
+[node name="moneda13" parent="." instance=ExtResource( 5 )]
+position = Vector2( 2625.31, 155.082 )
+
+[node name="moneda14" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3486.03, 72.3706 )
+
+[node name="moneda15" parent="." instance=ExtResource( 5 )]
+position = Vector2( 3520.92, 71.0782 )
+
+[node name="moneda16" parent="." instance=ExtResource( 5 )]
+position = Vector2( 4106.36, 175.759 )
+
+[node name="moneda17" parent="." instance=ExtResource( 5 )]
+position = Vector2( 4151.59, 171.882 )
+
+[node name="moneda18" parent="." instance=ExtResource( 5 )]
+position = Vector2( 4006.85, 219.7 )
+
+[node name="moneda19" parent="." instance=ExtResource( 5 )]
+position = Vector2( 4046.91, 223.577 )
+
+[node name="moneda20" parent="." instance=ExtResource( 5 )]
+position = Vector2( 4677.58, 121.48 )
+
+[node name="moneda21" parent="." instance=ExtResource( 5 )]
+position = Vector2( 4726.69, 121.48 )
+
+[node name="moneda22" parent="." instance=ExtResource( 5 )]
+position = Vector2( 4817.16, 27.1379 )
+
+[node name="moneda23" parent="." instance=ExtResource( 5 )]
+position = Vector2( 4867.56, 28.4303 )
+
+[node name="moneda24" parent="." instance=ExtResource( 5 )]
+position = Vector2( 4963.19, 122.773 )
+
+[node name="moneda25" parent="." instance=ExtResource( 5 )]
+position = Vector2( 5005.84, 124.065 )
+
+[node name="moneda26" parent="." instance=ExtResource( 5 )]
+position = Vector2( 5932.46, 270.102 )
+
+[node name="moneda27" parent="." instance=ExtResource( 5 )]
+position = Vector2( 5964.77, 236.5 )
+
+[node name="moneda28" parent="." instance=ExtResource( 5 )]
+position = Vector2( 6006.13, 202.899 )
+
+[node name="moneda29" parent="." instance=ExtResource( 5 )]
+position = Vector2( 6046.19, 202.899 )
+
+[node name="moneda30" parent="." instance=ExtResource( 5 )]
+position = Vector2( 6082.38, 228.746 )
+
+[node name="moneda31" parent="." instance=ExtResource( 5 )]
+position = Vector2( 6115.98, 264.932 )
+
+[node name="moneda32" parent="." instance=ExtResource( 5 )]
+position = Vector2( 6141.83, 306.288 )
+
+[node name="moneda33" parent="." instance=ExtResource( 5 )]
+position = Vector2( 6167.67, 363.152 )
+
+[node name="moneda34" parent="." instance=ExtResource( 5 )]
+position = Vector2( 7124.02, 558.298 )
+
+[node name="moneda35" parent="." instance=ExtResource( 5 )]
+position = Vector2( 7164.08, 562.175 )
+
+[node name="moneda36" parent="." instance=ExtResource( 5 )]
+position = Vector2( 7202.85, 559.59 )
+
+[node name="moneda37" parent="." instance=ExtResource( 5 )]
+position = Vector2( 7704.29, 320.504 )
+
+[node name="moneda38" parent="." instance=ExtResource( 5 )]
+position = Vector2( 7749.52, 346.351 )
+
+[node name="moneda39" parent="." instance=ExtResource( 5 )]
+position = Vector2( 7802.51, 372.198 )
+
+[node name="moneda40" parent="." instance=ExtResource( 5 )]
+position = Vector2( 7802.51, 372.198 )
 
 [node name="gos_metal·lic" parent="." instance=ExtResource( 6 )]
 position = Vector2( 566.948, -119.357 )
@@ -303,6 +425,82 @@ position = Vector2( 1256.43, -36.7313 )
 scale = Vector2( 0.911371, 1.03367 )
 [connection signal="atac" from="Zoro" to="." method="_on_Zoro_atac"]
 [connection signal="body_entered" from="moneda" to="." method="_on_moneda_body_entered"]
+[connection signal="cash" from="moneda" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda2" to="." method="_on_moneda2_body_entered"]
+[connection signal="cash" from="moneda2" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda3" to="." method="_on_moneda3_body_entered"]
+[connection signal="cash" from="moneda3" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda4" to="." method="_on_moneda4_body_entered"]
+[connection signal="cash" from="moneda4" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda5" to="." method="_on_moneda5_body_entered"]
+[connection signal="cash" from="moneda5" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda6" to="." method="_on_moneda6_body_entered"]
+[connection signal="cash" from="moneda6" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda7" to="." method="_on_moneda7_body_entered"]
+[connection signal="cash" from="moneda7" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda8" to="." method="_on_moneda8_body_entered"]
+[connection signal="cash" from="moneda8" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda9" to="." method="_on_moneda9_body_entered"]
+[connection signal="cash" from="moneda9" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda10" to="." method="_on_moneda10_body_entered"]
+[connection signal="cash" from="moneda10" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda11" to="." method="_on_moneda11_body_entered"]
+[connection signal="body_entered" from="moneda12" to="." method="_on_moneda12_body_entered"]
+[connection signal="cash" from="moneda12" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda13" to="." method="_on_moneda13_body_entered"]
+[connection signal="cash" from="moneda13" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda14" to="." method="_on_moneda14_body_entered"]
+[connection signal="cash" from="moneda14" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda15" to="." method="_on_moneda15_body_entered"]
+[connection signal="cash" from="moneda15" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda16" to="." method="_on_moneda16_body_entered"]
+[connection signal="cash" from="moneda16" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda17" to="." method="_on_moneda17_body_entered"]
+[connection signal="cash" from="moneda17" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda18" to="." method="_on_moneda18_body_entered"]
+[connection signal="cash" from="moneda18" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda19" to="." method="_on_moneda19_body_entered"]
+[connection signal="cash" from="moneda19" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda20" to="." method="_on_moneda20_body_entered"]
+[connection signal="cash" from="moneda20" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda21" to="." method="_on_moneda21_body_entered"]
+[connection signal="cash" from="moneda21" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda22" to="." method="_on_moneda22_body_entered"]
+[connection signal="cash" from="moneda22" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda23" to="." method="_on_moneda23_body_entered"]
+[connection signal="cash" from="moneda23" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda24" to="." method="_on_moneda24_body_entered"]
+[connection signal="cash" from="moneda24" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda25" to="." method="_on_moneda25_body_entered"]
+[connection signal="cash" from="moneda25" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda26" to="." method="_on_moneda26_body_entered"]
+[connection signal="cash" from="moneda26" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda27" to="." method="_on_moneda27_body_entered"]
+[connection signal="cash" from="moneda27" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda28" to="." method="_on_moneda28_body_entered"]
+[connection signal="cash" from="moneda28" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda29" to="." method="_on_moneda29_body_entered"]
+[connection signal="cash" from="moneda29" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda30" to="." method="_on_moneda30_body_entered"]
+[connection signal="cash" from="moneda30" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda31" to="." method="_on_moneda31_body_entered"]
+[connection signal="cash" from="moneda31" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda32" to="." method="_on_moneda32_body_entered"]
+[connection signal="cash" from="moneda32" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda33" to="." method="_on_moneda33_body_entered"]
+[connection signal="cash" from="moneda33" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda34" to="." method="_on_moneda34_body_entered"]
+[connection signal="body_entered" from="moneda35" to="." method="_on_moneda35_body_entered"]
+[connection signal="cash" from="moneda35" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda36" to="." method="_on_moneda36_body_entered"]
+[connection signal="cash" from="moneda36" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda37" to="." method="_on_moneda37_body_entered"]
+[connection signal="cash" from="moneda37" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda38" to="." method="_on_moneda38_body_entered"]
+[connection signal="cash" from="moneda38" to="." method="_on_moneda_cash"]
+[connection signal="body_entered" from="moneda39" to="." method="_on_moneda39_body_entered"]
+[connection signal="body_entered" from="moneda40" to="." method="_on_moneda40_body_entered"]
+[connection signal="cash" from="moneda40" to="." method="_on_moneda_cash"]
 [connection signal="cop" from="gos_metal·lic" to="." method="_on_Area2D_cop"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]

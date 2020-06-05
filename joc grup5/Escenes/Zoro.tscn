@@ -539,9 +539,11 @@ animation = "salta"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=26]
 
-[sub_resource type="AnimationNodeStateMachineTransition" id=28]
+[sub_resource type="AnimationNodeStateMachineTransition" id=27]
 switch_mode = 2
 auto_advance = true
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=28]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=29]
 
@@ -550,6 +552,7 @@ auto_advance = true
 [sub_resource type="AnimationNodeStateMachineTransition" id=31]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=32]
+switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=33]
 switch_mode = 2
@@ -561,11 +564,8 @@ switch_mode = 2
 switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=36]
-switch_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id=37]
-
-[sub_resource type="AnimationNodeStateMachineTransition" id=40]
 
 [sub_resource type="AnimationNodeStateMachine" id=38]
 states/atac/node = SubResource( 18 )
@@ -573,12 +573,12 @@ states/atac/position = Vector2( 813, 96 )
 states/corre/node = SubResource( 19 )
 states/corre/position = Vector2( 529, -23 )
 states/espera/node = SubResource( 20 )
-states/espera/position = Vector2( 585, 156 )
+states/espera/position = Vector2( 572, 161 )
 states/mort/node = SubResource( 21 )
 states/mort/position = Vector2( 288, 96 )
 states/salta/node = SubResource( 22 )
 states/salta/position = Vector2( 529, 320 )
-transitions = [ "espera", "corre", SubResource( 23 ), "corre", "espera", SubResource( 24 ), "espera", "mort", SubResource( 25 ), "espera", "salta", SubResource( 26 ), "atac", "espera", SubResource( 28 ), "corre", "atac", SubResource( 29 ), "corre", "mort", SubResource( 30 ), "salta", "mort", SubResource( 31 ), "atac", "mort", SubResource( 32 ), "atac", "corre", SubResource( 33 ), "atac", "salta", SubResource( 34 ), "salta", "espera", SubResource( 35 ), "salta", "corre", SubResource( 36 ), "corre", "salta", SubResource( 37 ), "espera", "atac", SubResource( 40 ) ]
+transitions = [ "espera", "corre", SubResource( 23 ), "corre", "espera", SubResource( 24 ), "espera", "mort", SubResource( 25 ), "espera", "salta", SubResource( 26 ), "atac", "espera", SubResource( 27 ), "corre", "atac", SubResource( 28 ), "corre", "mort", SubResource( 29 ), "salta", "mort", SubResource( 30 ), "atac", "mort", SubResource( 31 ), "atac", "corre", SubResource( 32 ), "atac", "salta", SubResource( 33 ), "salta", "espera", SubResource( 34 ), "salta", "corre", SubResource( 35 ), "corre", "salta", SubResource( 36 ), "espera", "atac", SubResource( 37 ) ]
 start_node = "espera"
 graph_offset = Vector2( 249.025, -15.6106 )
 
