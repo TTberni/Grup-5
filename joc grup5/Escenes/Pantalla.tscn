@@ -239,18 +239,11 @@ extents = Vector2( 784.478, 10 )
 script = ExtResource( 7 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 845.639, -65.1636 )
-scale = Vector2( 0.975698, 0.959563 )
+position = Vector2( 5202.1, -73.632 )
+scale = Vector2( 0.979802, 0.962875 )
 texture = ExtResource( 8 )
 region_enabled = true
 region_rect = Rect2( -4.63066, -464.973, 16547.2, 1544.17 )
-
-[node name="Sprite2" type="Sprite" parent="."]
-position = Vector2( 920.754, -120.516 )
-scale = Vector2( 0.975698, 0.959563 )
-texture = ExtResource( 8 )
-region_enabled = true
-region_rect = Rect2( 1.10858, -464.973, 16541.5, 1544.17 )
 
 [node name="TileMap" type="TileMap" parent="."]
 material = SubResource( 2 )
